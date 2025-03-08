@@ -1,0 +1,60 @@
+# GraphOS Umbrella Application Visualization
+
+## Introduction
+
+This notebook provides interactive visualizations of the GraphOS umbrella application structure and dependencies.
+
+## Setup
+
+```elixir
+Mix.install([
+  {:graph_os_livebook, "~> 0.1.0"},
+  {:kino, "~> 0.11.3"},
+  {:vega_lite, "~> 0.1.8"},
+  {:kino_vega_lite, "~> 0.1.10"}
+])
+
+alias GraphOS.Livebook.Visualizers.{Umbrella, Dependencies}
+```
+
+## Umbrella Structure Visualization
+
+The following visualization shows the overall structure of the GraphOS umbrella application:
+
+```elixir
+Umbrella.visualize()
+|> Kino.VegaLite.new()
+```
+
+## Dependency Visualization
+
+This visualization shows the dependencies between different GraphOS components:
+
+```elixir
+Dependencies.visualize()
+|> Kino.VegaLite.new()
+```
+
+## Component Details
+
+Let's examine each component of the GraphOS umbrella application:
+
+### GraphOS.Graph
+
+The core graph library providing data structures, algorithms, and storage.
+
+### GraphOS.Core
+
+OS functions such as access control and security.
+
+### GraphOS.MCP
+
+Model Context Protocol implementation for AI/LLM integration.
+
+### GraphOS.Livebook
+
+Livebook integration for interactive graph analysis and visualization.
+
+## Conclusion
+
+GraphOS is designed as a modular, distributed graph operating system. Each component can be used independently or together within the umbrella application. 
