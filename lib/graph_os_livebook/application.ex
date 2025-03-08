@@ -1,4 +1,4 @@
-defmodule GraphOsLivebook.Application do
+defmodule GraphOS.Livebook.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -8,13 +8,13 @@ defmodule GraphOsLivebook.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: GraphOsLivebook.Worker.start_link(arg)
-      # {GraphOsLivebook.Worker, arg}
+      # Starts a worker by calling: GraphOS.Livebook.Worker.start_link(arg)
+      # {GraphOS.Livebook.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: GraphOsLivebook.Supervisor]
+    opts = [strategy: :one_for_one, name: GraphOS.Livebook.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end

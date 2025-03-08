@@ -1,6 +1,9 @@
-defmodule GraphOsLivebook do
+defmodule GraphOS.Livebook do
   @moduledoc """
-  Documentation for `GraphOsLivebook`.
+  Documentation for `GraphOS.Livebook`.
+
+  This module provides functionality for visualizing the GraphOS umbrella
+  application structure and components using Livebook.
   """
 
   @doc """
@@ -8,7 +11,7 @@ defmodule GraphOsLivebook do
 
   ## Examples
 
-      iex> GraphOsLivebook.hello()
+      iex> GraphOS.Livebook.hello()
       :world
 
   """
